@@ -31,6 +31,7 @@ return {
         terraformls = {},
         jsonls = {},
         yamlls = {},
+        gopls = {},
 
         lua_ls = {
           -- cmd = {...},
