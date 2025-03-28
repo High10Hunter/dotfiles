@@ -74,3 +74,12 @@ vim.keymap.set("n", "<leader>gt", "<cmd>GoTest<CR>", { desc = "Go Test" })
 
 -- quit file
 vim.keymap.set("n", "<C-q>", "<cmd> q <CR>", opts)
+
+-- aider plugin
+vim.api.nvim_set_keymap("n", "<leader>ao", ":AiderOpen<CR>", { noremap = true, silent = true, desc = "Open Aider" })
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>am",
+  ":AiderAddModifiedFiles<CR>",
+  { noremap = true, silent = true, desc = "Add modified files Aider" }
+)
