@@ -75,6 +75,29 @@ vim.keymap.set("n", "<leader>gt", "<cmd>GoTest<CR>", { desc = "Go Test" })
 -- quit file
 vim.keymap.set("n", "<C-q>", "<cmd> q <CR>", opts)
 
+-- show full error
+vim.keymap.set("n", "<leader>se", vim.diagnostic.open_float, { desc = "Show Full Error" })
+
+-- copy error
+vim.keymap.set("n", "<leader>ce", function()
+  local diagnostics = vim.diagnostic.get(0, { lnum = vim.fn.line(".") - 1 })
+  if #diagnostics > 0 then
+    local message = diagnostics[1].message
+    vim.fn.setreg("+", message)
+    print("Copied diagnostic: " .. message)
+  else
+    print("No diagnostic at cursor")
+  end
+end, { noremap = true, silent = true, desc = "Copy the error message" })
+
+-- go to errors in a file :/
+vim.keymap.set("n", "<leader>ne", vim.diagnostic.goto_next, { desc = "Jump to next error" }) -- next err
+vim.keymap.set("n", "<leader>pe", vim.diagnostic.goto_prev, { desc = "Jump to previous error" }) -- previous err
+
+-- move selected lines
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
 -- aider plugin
 vim.api.nvim_set_keymap("n", "<leader>ao", ":AiderOpen<CR>", { noremap = true, silent = true, desc = "Open Aider" })
 vim.api.nvim_set_keymap(
