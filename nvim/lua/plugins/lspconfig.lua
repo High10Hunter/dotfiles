@@ -1,6 +1,7 @@
 return {
   {
     "neovim/nvim-lspconfig",
+    "towolf/vim-helm",
     ---@class PluginLspOpts
     opts = {
       ---@type lspconfig.options
@@ -32,6 +33,8 @@ return {
         jsonls = {},
         yamlls = {},
         gopls = {},
+        docker_compose_language_service = {},
+        helm_ls = {},
 
         lua_ls = {
           -- cmd = {...},
