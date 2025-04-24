@@ -40,3 +40,6 @@ opt.scrolloff = 8
 vim.g.mkdp_browser = "/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge"
 
 vim.g.lazygit_config = false
+
+-- hide command space
+opt.cmdheight = 0
