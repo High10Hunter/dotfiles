@@ -37,7 +37,10 @@ opt.scrolloff = 8
 --
 -- opt.vim_markdown_conceal = 0
 --
+-- use in MacOS
 vim.g.mkdp_browser = "/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge"
+-- use in Linux
+-- vim.g.mkdp_browser = "/usr/bin/microsoft-edge"
 
 vim.g.lazygit_config = false
 
