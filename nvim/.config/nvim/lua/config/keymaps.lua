@@ -106,3 +106,23 @@ vim.api.nvim_set_keymap(
   ":AiderAddModifiedFiles<CR>",
   { noremap = true, silent = true, desc = "Add modified files Aider" }
 )
+
+-- CodeCompanion plugin
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>ac",
+  ":CodeCompanionChat Toggle<CR>",
+  { noremap = true, silent = true, desc = "Open CodeCompanion Chat" }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>al",
+  ":CodeCompanionActions<CR>",
+  { noremap = true, silent = true, desc = "Open CodeCompanion Action Palette" }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>ap",
+  ":CodeCompanion<CR>",
+  { noremap = true, silent = true, desc = "Open CodeCompanion Prompt" }
+)
