@@ -1,0 +1,27 @@
+{
+  "wcgw": {
+    "name": "wcgw",
+    "command": "uv",
+    "args": [
+      "tool",
+      "run",
+      "--python",
+      "3.12",
+      "wcgw@latest"
+    ],
+    "enabledForAgents": [
+      "engineer"
+    ]
+  },
+  "context7": {
+    "name": "context7",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@upstash/context7-mcp"
+    ],
+    "enabledForAgents": [
+      "engineer"
+    ]
+  }
+}

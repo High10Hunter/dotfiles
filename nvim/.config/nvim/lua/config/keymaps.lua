@@ -98,15 +98,6 @@ vim.keymap.set("n", "<leader>pe", vim.diagnostic.goto_prev, { desc = "Jump to pr
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
--- aider plugin
-vim.api.nvim_set_keymap("n", "<leader>ao", ":AiderOpen<CR>", { noremap = true, silent = true, desc = "Open Aider" })
-vim.api.nvim_set_keymap(
-  "n",
-  "<leader>am",
-  ":AiderAddModifiedFiles<CR>",
-  { noremap = true, silent = true, desc = "Add modified files Aider" }
-)
-
 -- CodeCompanion plugin
 vim.api.nvim_set_keymap(
   "n",
