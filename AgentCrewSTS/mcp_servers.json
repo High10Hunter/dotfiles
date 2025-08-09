@@ -10,7 +10,9 @@
       "wcgw@latest"
     ],
     "enabledForAgents": [
-      "engineer"
+      "software_engineer",
+      "solution_architect",
+      "devops_engineer"
     ]
   },
   "context7": {
@@ -21,7 +23,125 @@
       "@upstash/context7-mcp"
     ],
     "enabledForAgents": [
-      "engineer"
+      "software_engineer",
+      "solution_architect",
+      "devops_engineer"
+    ]
+  },
+  "aws-mcp-server": {
+    "name": "aws-mcp-server",
+    "command": "docker",
+    "args": [
+      "run",
+      "-i",
+      "--rm",
+      "-v",
+      "/Users/mac/.aws:/home/appuser/.aws:ro",
+      "ghcr.io/alexei-led/aws-mcp-server:latest"
+    ],
+    "enabledForAgents": [
+      "software_engineer",
+      "solution_architect",
+      "devops_engineer"
+    ]
+  },
+  "awslabs.aws-pricing-mcp-server": {
+    "name": "aws-pricing-mcp-server",
+    "command": "uvx",
+    "args": [
+      "awslabs.aws-pricing-mcp-server@latest"
+    ],
+    "env": {
+      "FASTMCP_LOG_LEVEL": "ERROR"
+    },
+    "enabledForAgents": [
+      "solution_architect",
+      "devops_engineer",
+      "document_writer",
+      "cost_inquiry"
+    ]
+  },
+  "calculator": {
+    "name": "calculator",
+    "command": "uvx",
+    "args": [
+      "mcp-server-calculator"
+    ],
+    "enabledForAgents": [
+      "solution_architect",
+      "devops_engineer",
+      "document_writer",
+      "cost_inquiry"
+    ]
+  },
+  "mcp-mermaid": {
+    "name": "mcp-mermaid",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-mermaid"
+    ],
+    "enabledForAgents": [
+      "software_engineer",
+      "solution_architect",
+      "devops_engineer"
+    ]
+  },
+  "filesystem": {
+    "name": "filesystem",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@modelcontextprotocol/server-filesystem",
+      "/Users/mac/IT_stuff/",
+      "/Users/mac/STS"
+    ],
+    "enabledForAgents": [
+      "software_engineer",
+      "solution_architect",
+      "devops_engineer",
+      "document_writer",
+      "technical_presenter"
+    ]
+  },
+  "kubernetes": {
+    "name": "kubernetes",
+    "command": "npx",
+    "args": [
+      "mcp-server-kubernetes"
+    ],
+    "enabledForAgents": [
+      "solution_architect",
+      "devops_engineer"
+    ]
+  },
+  "excel": {
+    "name": "ms-excel",
+    "command": "uvx",
+    "args": [
+      "excel-mcp-server",
+      "stdio"
+    ],
+    "enabledForAgents": [
+      "solution_architect",
+      "devops_engineer",
+      "document_writer",
+      "cost_inquiry"
+    ]
+  },
+  "word-document-server": {
+    "name": "ms-word",
+    "command": "uvx",
+    "args": [
+      "--from",
+      "office-word-mcp-server",
+      "word_mcp_server"
+    ],
+    "enabledForAgents": [
+      "solution_architect",
+      "devops_engineer",
+      "document_writer",
+      "cost_inquiry"
     ]
   }
 }
