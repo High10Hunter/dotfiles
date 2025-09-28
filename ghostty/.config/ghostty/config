@@ -1,0 +1,14 @@
+theme = "Rose Pine"
+font-family = "JetBrainsMonoNL Nerd Font"
+font-size = 15 
+background-opacity = 0.80
+background-blur = true 
+background-image = "~/Pictures/evangelion.jpeg"
+background-image-opacity = 0.5 
+background-image-fit = cover 
+macos-titlebar-proxy-icon = hidden
+macos-titlebar-style = hidden
+maximize = true
+title = ""
+cursor-opacity = 0.90
+adjust-cursor-thickness = 1
