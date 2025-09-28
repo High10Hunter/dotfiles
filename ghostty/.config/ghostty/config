@@ -1,10 +1,10 @@
 theme = "TokyoNight"
 font-family = "JetBrainsMonoNL Nerd Font"
 font-size = 15 
-background-opacity = 0.80
+background-opacity = 0.85
 background-blur = true 
 background-image = "~/Pictures/evangelion.jpeg"
-background-image-opacity = 0.5 
+background-image-opacity = 0.4 
 background-image-fit = cover 
 macos-titlebar-proxy-icon = hidden
 macos-titlebar-style = hidden 
