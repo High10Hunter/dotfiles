@@ -147,4 +147,3 @@ eval "$(fzf --zsh)"
 
 # Bat configuration
 export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always --line-range :500 {}'"
-alias cat='bat'
