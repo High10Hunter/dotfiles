@@ -1,7 +1,7 @@
 theme = "TokyoNight"
 font-family = "JetBrainsMonoNL Nerd Font"
 font-size = 15 
-background-opacity = 0.80
+background-opacity = 0.90
 background-blur = true 
 background-image = "~/Pictures/evangelion.jpeg"
 background-image-opacity = 0.3 
