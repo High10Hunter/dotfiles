@@ -160,3 +160,6 @@ if [ -n "$IN_WCGW_ENVIRONMENT" ]; then
  precmd_functions+=prmptcmdwcgw
 fi
 # --WCGW_ENVIRONMENT_END--
+
+# Mise configuration
+eval "$(mise activate zsh)"
