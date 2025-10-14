@@ -125,6 +125,7 @@ export GODEBUG=asyncpreemptoff=1
 
 # .NET configuration
 export PATH="/opt/homebrew/opt/dotnet@/bin:$PATH"
+export PATH="$HOME/.dotnet/tools:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/opt/homebrew/share/google-cloud-sdk/path.zsh.inc' ]; then . '/opt/homebrew/share/google-cloud-sdk/path.zsh.inc'; fi
