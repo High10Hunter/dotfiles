@@ -123,6 +123,9 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 export GODEBUG=asyncpreemptoff=1
 
+# .NET configuration
+export PATH="/opt/homebrew/opt/dotnet@/bin:$PATH"
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/opt/homebrew/share/google-cloud-sdk/path.zsh.inc' ]; then . '/opt/homebrew/share/google-cloud-sdk/path.zsh.inc'; fi
 
@@ -147,3 +150,12 @@ eval "$(fzf --zsh)"
 
 # Bat configuration
 export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always --line-range :500 {}'"
+
+# --WCGW_ENVIRONMENT_START--
+if [ -n "$IN_WCGW_ENVIRONMENT" ]; then
+ PROMPT_COMMAND='printf "◉ $(pwd)──➤ \r\e[2K"'
+ prmptcmdwcgw() { eval "$PROMPT_COMMAND" }
+ add-zsh-hook -d precmd prmptcmdwcgw
+ precmd_functions+=prmptcmdwcgw
+fi
+# --WCGW_ENVIRONMENT_END--
