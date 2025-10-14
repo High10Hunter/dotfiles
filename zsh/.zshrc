@@ -118,7 +118,6 @@ alias lzd='lazydocker'
 alias df='duf'
 
 export GOPATH=$HOME/golang
-export GOROOT=/opt/homebrew/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 export GODEBUG=asyncpreemptoff=1
