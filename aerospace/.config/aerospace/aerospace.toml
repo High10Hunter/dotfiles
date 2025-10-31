@@ -45,7 +45,7 @@ automatically-unhide-macos-hidden-apps = false
     alt-b = 'workspace B' # Browser
     alt-c = 'workspace C' # Coding
     alt-d = 'workspace D' # Documents, Files
-    alt-n = 'workspace N' # 
+    alt-n = 'workspace N' # Notes 
     alt-r = 'workspace R' # Reading
     alt-s = 'workspace S' # System, Settings,...
     alt-t = 'workspace T' # Tools: DBeaver, Postman...
@@ -134,3 +134,7 @@ run = "move-node-to-workspace A"
 [[on-window-detected]]
 if.app-id = 'com.vng.zalo.zalocall'
 run = "move-node-to-workspace A"
+
+[[on-window-detected]]
+if.app-id = 'com.apple.iCal'
+run = "layout floating"
