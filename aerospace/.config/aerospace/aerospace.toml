@@ -125,3 +125,12 @@ run = "move-node-to-workspace T"
 [[on-window-detected]]
 if.app-id = 'com.apple.Preview'
 run = "move-node-to-workspace R"
+
+### Anything ###
+[[on-window-detected]]
+if.app-id = 'com.vng.zalo'
+run = "move-node-to-workspace A"
+
+[[on-window-detected]]
+if.app-id = 'com.vng.zalo.zalocall'
+run = "move-node-to-workspace A"
