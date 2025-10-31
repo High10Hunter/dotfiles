@@ -120,3 +120,8 @@ run = "move-node-to-workspace N"
 [[on-window-detected]]
 if.app-id ='org.jkiss.dbeaver.core.product'
 run = "move-node-to-workspace T"
+
+### Reading ###
+[[on-window-detected]]
+if.app-id = 'com.apple.Preview'
+run = "move-node-to-workspace R"
