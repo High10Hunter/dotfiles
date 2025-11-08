@@ -162,3 +162,7 @@ fi
 
 # Mise configuration
 eval "$(mise activate zsh)"
+
+# iximuz lab cli 
+export PATH=$PATH:/Users/mac/.iximiuz/labctl/bin
+source <(labctl completion zsh)
