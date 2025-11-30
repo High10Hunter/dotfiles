@@ -136,5 +136,9 @@ if.app-id = 'com.vng.zalo.zalocall'
 run = "move-node-to-workspace A"
 
 [[on-window-detected]]
+if.app-id = 'ru.keepcoder.Telegram'
+run = "move-node-to-workspace A"
+
+[[on-window-detected]]
 if.app-id = 'com.apple.iCal'
 run = "layout floating"
