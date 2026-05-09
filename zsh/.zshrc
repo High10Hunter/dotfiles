@@ -111,6 +111,9 @@ fi; done;
 echo "${paths[*]}"')"
 export PATH="/Users/mac/.pyenv/shims:${PATH}"
 command pyenv rehash 2>/dev/null
+
+eval "$(mise activate zsh)"
+
 eval "$(zoxide init --cmd cd zsh)"
 export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 eval "$(/opt/homebrew/bin/brew shellenv)"
