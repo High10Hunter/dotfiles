@@ -112,6 +112,7 @@ echo "${paths[*]}"')"
 export PATH="/Users/mac/.pyenv/shims:${PATH}"
 command pyenv rehash 2>/dev/null
 
+# Mise configuration
 eval "$(mise activate zsh)"
 
 eval "$(zoxide init --cmd cd zsh)"
@@ -163,8 +164,6 @@ if [ -n "$IN_WCGW_ENVIRONMENT" ]; then
 fi
 # --WCGW_ENVIRONMENT_END--
 
-# Mise configuration
-eval "$(mise activate zsh)"
 
 # iximuz lab cli 
 export PATH=$PATH:/Users/mac/.iximiuz/labctl/bin
