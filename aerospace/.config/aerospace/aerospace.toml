@@ -128,6 +128,10 @@ run = "move-node-to-workspace R"
 
 ### Anything ###
 [[on-window-detected]]
+if.app-id = 'com.carriez.rustdesk'
+run = "move-node-to-workspace A"
+
+[[on-window-detected]]
 if.app-id = 'com.vng.zalo'
 run = "move-node-to-workspace A"
 
