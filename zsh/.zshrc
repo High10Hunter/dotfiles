@@ -168,3 +168,6 @@ fi
 # iximuz lab cli 
 export PATH=$PATH:/Users/mac/.iximiuz/labctl/bin
 source <(labctl completion zsh)
+
+# opencode
+export PATH=/Users/quytran/.opencode/bin:$PATH
