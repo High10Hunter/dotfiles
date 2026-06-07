@@ -105,7 +105,7 @@ run = "layout floating"
 ### Work ###
 [[on-window-detected]]
 if.app-id = 'com.carriez.rustdesk'
-run = "move-node-to-workspace A"
+run = "move-node-to-workspace W"
 
 [[on-window-detected]]
 if.app-id ='com.tinyspeck.slackmacgap'
