@@ -1,0 +1,48 @@
+#!/bin/bash
+
+# Configuration
+PORT=7681
+# CREDS="admin:YourSecretPassword"
+SHELL_CMD="zsh"
+
+# Detect OS to determine the correct Tailscale binary
+if uname -a | grep -qEi "(microsoft|wsl)"; then
+    TS_CMD="tailscale.exe"
+else
+    TS_CMD="tailscale"
+fi
+
+case "$1" in
+    up)
+        echo "Starting ttyd..."
+        # Prevent starting multiple instances if already running
+        if pgrep -x "ttyd" > /dev/null; then
+            echo "ttyd is already running."
+        else
+            # nohup ttyd -W -p $PORT -c $CREDS $SHELL_CMD > /dev/null 2>&1 &
+            nohup ttyd -W -p $PORT $SHELL_CMD > /dev/null 2>&1 &
+            echo "ttyd started on port $PORT."
+        fi
+
+        echo "Exposing port $PORT via Tailscale Serve in the background..."
+        # The --bg flag runs serve in the background and returns your prompt
+        $TS_CMD serve --bg $PORT
+        
+        echo "✅ Terminal access is UP. You can safely keep working or close this window."
+        ;;
+    down)
+        echo "Stopping ttyd..."
+        # Kill the ttyd process
+        pkill -x "ttyd" && echo "ttyd stopped." || echo "ttyd was not running."
+
+        echo "Turning off Tailscale Serve..."
+        # Stops the background serve process
+        $TS_CMD serve off
+        
+        echo "🛑 Terminal access is DOWN."
+        ;;
+    *)
+        echo "Usage: h10h-ttyd {up|down}"
+        exit 1
+        ;;
+esac
