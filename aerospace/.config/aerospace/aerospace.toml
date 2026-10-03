@@ -120,6 +120,10 @@ run = "move-node-to-workspace W"
 if.app-id = 'com.apple.Notes'
 run = "move-node-to-workspace N"
 
+[[on-window-detected]]
+if.app-id = 'net.ankiweb.anki'
+run = "move-node-to-workspace N"
+
 ### Tools ###
 [[on-window-detected]]
 if.app-id ='org.jkiss.dbeaver.core.product'
